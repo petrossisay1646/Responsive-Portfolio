@@ -525,3 +525,77 @@ display: none;
   80% { transform: translateX(-400%);}
   100% { transform: translateX(-500%);}
 }
+
+
+/* Contact Me section */
+.contact {
+  min-height: auto;
+  transform: translateY(-2rem);
+}
+.contact h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.contactDescription {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.contact form {
+  align-items: center;
+}
+.contact form .inputBox {
+  position: relative;
+  flex-wrap: wrap;
+}
+.contact form .inputBox .inputField,
+.contact form .textareaField {
+  position: relative;
+  width: 49%;
+  align-items: center;
+  margin: 1rem auto;
+}
+.contact form .inputBox .inputField input,
+.contact form .textareaField textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: #ededed;
+  background: transparent;
+  border-radius: .6rem;
+  border: .2rem solid #00ffff;
+}
+.contact form .inputBox .inputField input::placeholder,
+.contact form .textareaField textarea::placeholder {
+  color: #ededed;
+}
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #1d8b8b;
+  border-radius: .6rem;
+  z-index: -1;
+  transition: .5s;
+}
+.contact form .inputBox .inputField input:focus~.focus,
+.contact form .inputBox .inputField input:valid~.focus,
+.contact form .textareaField textarea:focus~.focus,
+.contact form .textareaField textarea:valid~.focus {
+  width: 100%;
+}
+.contact form .textareaField textarea {
+  resize: none;
+}
+.btns {
+  width: 55vw;
+  align-items: center;
+  text-align: center;
+}
+.btns .btn {
+  cursor: pointer;
+  margin-top: 2rem;
+}
