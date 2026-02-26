@@ -599,3 +599,46 @@ display: none;
   cursor: pointer;
   margin-top: 2rem;
 }
+
+
+/* footer part */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: #1d8b8b;
+}
+.footerText p{
+  font-size: 1.6rem;
+}
+.footerIconTop a .i {
+  font-size: 2rem;
+  z-index: 1;
+}
+.footerIconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: #00ffff;
+  border-radius: .6rem;
+  overflow: hidden;
+}
+.footerIconTop a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(270deg,
+  #00ffff 25%,
+  #ff00ff 100%);
+  transition: .5s;
+}
+.footerIconTop a:hover::before {
+  width: 100%;
+}
