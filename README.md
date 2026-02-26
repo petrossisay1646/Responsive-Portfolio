@@ -2,7 +2,7 @@
 
 # 📁 Personal Portfolio — Petros Sisay
 
-**Live Demo:** [https://gleeful-crostata-c23995.netlify.app/](https://gleeful-crostata-c23995.netlify.app/)
+**Live Demo:** [https://beamish-pavlova-feadd8.netlify.app/](https://beamish-pavlova-feadd8.netlify.app/)
 
 A clean and modern personal portfolio webpage built using **only HTML & CSS** to showcase my skills, projects, and contact information as an aspiring full-stack web developer.
 
@@ -43,7 +43,7 @@ This is a **responsive portfolio website** built from scratch to present my prof
 
 * **HTML5** – for webpage structure
 * **CSS3** – for styling and layout
-* (Hosted live on Netlify — static deployment) ([gleeful-crostata-c23995.netlify.app][1])
+* (Hosted live on Netlify — static deployment) ([https://beamish-pavlova-feadd8.netlify.app/])
 
 ---
 
