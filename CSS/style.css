@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    object-fit: contain;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+  }
+  
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background-color: #112e42;
+  color: #ededed;
+}
+
+/*  Header part */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:0 9%;
+  margin-top: -12.2rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo img{
+    width: 12rem;
+    transition: .5s;
+}
+.logo img:hover{
+  box-shadow: 0 0 25px #00ffff,
+                          0 0 50px #00ffff,
+                          0 0 100px #00ffff;
+  border-radius: 50%;
+  }
+#humIcon img {
+  width: 3.6rem;
+  cursor: pointer;
+  background-color: #ededed;
+  position: absolute;
+  top: 4rem;
+  right: 9%;
+  display: none;
+}
+
+#humIcon img:hover {
+  box-shadow: 0 0 25px #00ffff,
+                        0 0 50px #00ffff,
+                        0 0 100px #00ffff;
+}
+.navbar a {
+  font-size: 1.7rem;
+  color: #ededed;
+  font-weight: 500;
+  margin-left: 4rem;
+  transition: 0.5s;
+}
+#humIcon::after {
+  content: 'Menu : Hover Under the Menu Icon';
+  position: absolute;
+  top: 48%;
+  right: 0%;
+  width: 0%;
+  height: 100%;
+  z-index: -2;
+  background: rgb(55, 55, 55, 0.6);
+  transition: 3s;
+}
+#humIcon:hover::after {
+  width:  25%;
+  box-shadow: 0 0 20px #00ffff,
+                        0 0 40px #00ffff;
+}
+.navbar a:hover {
+  color: #00ffff;
+  box-shadow: 0 0 25px #00ffff,
+                        0 0 50px #00ffff,
+                        0 0 100px #00ffff;
+}
+.spn {
+  background: linear-gradient(270deg,
+  #00ffff 25%,
+  #ff00ff 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* Home part */
+section {
+  min-height: 100vh;
+  padding:10rem 9% 2rem;
+}
+.home {
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+  background-image: url('/images/banner5(1).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.homeContent {
+  max-width: 65%;
+}
+.homeContent h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.homeContent .textAnimate {
+  position: relative;
+  width: 40rem;
+}
+.homeContent .textAnimate h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.homeContent .textAnimate h3 span{
+  position: relative;
+  display: inline-block;
+color: transparent;
+  -webkit-text-stroke: 0.7px #00ffff;
+  animation: displayText 15s linear infinite;
+  animation-delay: calc(-5s * var(--i));
+}
+@keyframes displayText {
+  33%,
+  100% {
+    display: none;
+  }
+}
+.homeContent .textAnimate h3 span::before {
+  content: attr(dataText);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid #00ffff;
+  color: #00ffff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: dtText 5s linear infinite;
+}
+@keyframes dtText {
+  0%,
+  100% {
+    width: 0;
+  }
+  33%,
+  66% {
+    width: 100%;
+  }
+}
+.homeContent p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.btnBox  {
+    position: relative;
+    width: 34.5rem;
+    transform: translateX(8.5rem);
+    height: 5rem;
+}
+.btnBox .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background-color: #112e42;
+    border: .2rem solid #00ffff;
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: #00ffff;
+    z-index: 1;
+    overflow: hidden;
+}
+.btnBox .btn:hover {
+  color: #112e42;
+  box-shadow: 0 0 25px #00ffff,
+                          0 0 50px #ff00ff,
+                          0 0 100px #00ffff;
+}
+.btnBox .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(270deg,
+  #00ffff 25%,
+  #ff00ff 100%);
+  z-index: -1;
+  transition: 1s;
+}
+.btnBox .btn:hover::before {
+  width: 100%;
+}
+.homeSci {
+  position: absolute;
+  bottom: 2rem;
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+.homeSci a img {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #00ffff;
+  border: .2rem solid #00ffff;
+  border-radius: 50%;
+  transition: .5s;
+}
+.homeSci a img:hover {
+  background: #ededed;
+  border: .5rem solid #ededed;
+  box-shadow: 0 0 25px #00ffff,
+                        0 0 50px #00ffff,
+                        0 0 100px #00ffff;
+}
+.snowSkills img {
+  animation: bubble 7s linear infinite;
+}
+@keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30vh);
+    opacity: 0;
+  }
+}
+.snowSkills {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top:  -5rem;
+}
+.snowSkills img:nth-child(1) {
+  animation-delay: .1s;
+  width: 25px;
+}
+.snowSkills img:nth-child(2) {
+  width: 45px;
+  animation-delay: 5.3s;
+}
+.snowSkills img:nth-child(3) {
+  animation-delay: 1.5s;
+  width: 45px;
+}
+.snowSkills img:nth-child(4) {
+  transform: translate(12vh);
+  animation-delay: 3.25s;
+  width: 35px;
+}
+.snowSkills img:nth-child(5) {
+  animation-delay: 1.5s;
+  transform: translate(10vh);
+  width: 45px;
+}
+.snowSkills img:nth-child(6) {
+  animation-delay: 1.5s;
+  transform: translate(15vh);
+  width: 25px;
+}
+.snowSkills img:nth-child(7) {
+  animation-delay: 4.5s;
+  width: 50px;
+  transform: translate(-20.5vh);
+}
+.snowSkills img:nth-child(8) {
+  transform: translate(10vh);
+  width: 45px;
+  animation-delay: .25s;
+}
+.snowSkills img:nth-child(9) {
+  transform: translate(-15.35vh);
+  width: 35px;
+  animation-delay: 9.35s;
+}
+.homeImgHover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+}
+.homeImgHover:hover {
+  background-color: #373737;
+  opacity: .7;
+}
